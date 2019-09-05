@@ -8,14 +8,12 @@ const Home = ({ getCategory }) => {
     const handleChange = e => {
         const selectedOption = e.target.selectedIndex;
         setCategory({
-            ...category,
-            'id' : e.target.value,
-            'name' : e.target[selectedOption].text
+            'id'    : e.target.value,
+            'name'  : e.target[selectedOption].text
         });
     }
 
     const handleClick = () => {
-        //getCategory(category.id, category.name);
         getCategory(category);
     }
 
@@ -39,7 +37,6 @@ const Home = ({ getCategory }) => {
                 <Link to={ 'game/' + category.category } onClick={ handleClick } className="btn btn-block btn-primary">
                     Comenzar
                 </Link>
-                {/* <input className="btn btn-block btn-primary" type="submit" value="Comenzar"/> */}
               </form>
             </div>
           </div>
