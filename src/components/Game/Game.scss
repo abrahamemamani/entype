@@ -1,0 +1,26 @@
+.app-game{
+    &__subtitle{
+        position: relative;
+        margin-bottom: 2.5rem;
+        &::after{
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -1rem;
+            transform: translateX(-50%);
+            height: .3rem;
+            width: 20%;
+            background-color: var(--primary);
+        }
+    }
+    &__form{
+        width: 100%;
+        @media screen and (min-width: 768px){
+            width: 40%;
+        }
+        .form-control{
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+}
