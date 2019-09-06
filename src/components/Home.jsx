@@ -8,13 +8,15 @@ const Home = ({ getCategory }) => {
     const handleChange = e => {
         const selectedOption = e.target.selectedIndex;
         setCategory({
-            'id'    : e.target.value,
+            'id'    : e.target.value -1,
             'name'  : e.target[selectedOption].text
         });
     }
 
-    const handleClick = () => {
-        getCategory(category);
+    const handleClick = (e) => {
+      (category.id !== undefined ) 
+        ? getCategory(category)
+        : e.preventDefault();
     }
 
     return (
@@ -34,7 +36,7 @@ const Home = ({ getCategory }) => {
                     <option value="3">Hogar, dulce hogar</option>
                   </select>
                 </div>
-                <Link to={ 'game/' + category.category } onClick={ handleClick } className="btn btn-block btn-primary">
+                <Link to={ 'game/' + (category.id + 1) } onClick={ handleClick } className="btn btn-block btn-primary">
                     Comenzar
                 </Link>
               </form>
