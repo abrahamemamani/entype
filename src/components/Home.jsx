@@ -34,6 +34,7 @@ const Home = ({ getCategory }) => {
                     <option value="1">El ser humano</option>
                     <option value="2">Perdido en el mundo digital</option>
                     <option value="3">Hogar, dulce hogar</option>
+                    <option value="4">Muero de hambre y sed</option>
                   </select>
                 </div>
                 <Link to={ 'game/' + (category.id + 1) } onClick={ handleClick } className="btn btn-block btn-primary">

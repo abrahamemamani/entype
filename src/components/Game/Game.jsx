@@ -14,7 +14,13 @@ const initialVocabulary = [
         { 'id' : '7',   'eng' : 'Ear',        'spa' : 'Oreja'   },
         { 'id' : '8',   'eng' : 'Nose',       'spa' : 'Naríz'   },
         { 'id' : '9',   'eng' : 'Hand',       'spa' : 'Mano'    },
-        { 'id' : '10',  'eng' : 'Finger',     'spa' : 'Dedo'    }
+        { 'id' : '10',  'eng' : 'Finger',     'spa' : 'Dedo'    },
+        { 'id' : '11',  'eng' : 'Tall',       'spa' : 'Alto'    },
+        { 'id' : '12',  'eng' : 'Handsome',   'spa' : 'Guapo'   },
+        { 'id' : '13',  'eng' : 'Arm',        'spa' : 'Brazo'   },
+        { 'id' : '14',  'eng' : 'Tooth',      'spa' : 'Diente'  },
+        { 'id' : '15',  'eng' : 'Neck',       'spa' : 'Cuello'  },
+        { 'id' : '16',  'eng' : 'Head',       'spa' : 'Cabeza'  }
     ],
     [
         { 'id' : '1',   'eng' : 'Hard drive',  'spa' : 'Disco duro'              },
@@ -26,7 +32,13 @@ const initialVocabulary = [
         { 'id' : '7',   'eng' : 'Virus',       'spa' : 'Virus'                   },
         { 'id' : '8',   'eng' : 'Email',       'spa' : 'Correo electrónico'      },
         { 'id' : '9',   'eng' : 'Desktop',     'spa' : 'Ordenador de escritorio' },
-        { 'id' : '10',  'eng' : 'Mouse',       'spa' : 'Ratón'                   }
+        { 'id' : '10',  'eng' : 'Mouse',       'spa' : 'Ratón'                   },
+        { 'id' : '11',  'eng' : 'Scanner',     'spa' : 'Escáner'                 },
+        { 'id' : '12',  'eng' : 'Keyboard',    'spa' : 'Teclado'                 },
+        { 'id' : '13',  'eng' : 'Printer',     'spa' : 'Impresora'               },
+        { 'id' : '14',  'eng' : 'Wireless',    'spa' : 'Inalámbrico'             },
+        { 'id' : '15',  'eng' : 'Online',      'spa' : 'En línea'                },
+        { 'id' : '16',  'eng' : 'Draft',       'spa' : 'Borrador'                }
     ],
     [
         { 'id' : '1',   'eng' : 'Kitchen',     'spa' : 'Cocina'     },
@@ -38,7 +50,27 @@ const initialVocabulary = [
         { 'id' : '7',   'eng' : 'Shelf',       'spa' : 'Estante'    },
         { 'id' : '8',   'eng' : 'Ceiling',     'spa' : 'Techo'      },
         { 'id' : '9',   'eng' : 'Stairs',      'spa' : 'Escalera'   },
-        { 'id' : '10',  'eng' : 'Floor',       'spa' : 'Piso'       }
+        { 'id' : '10',  'eng' : 'Floor',       'spa' : 'Piso'       },
+        { 'id' : '11',  'eng' : 'Bathroom',    'spa' : 'Baño'       },
+        { 'id' : '12',  'eng' : 'Bedroom',     'spa' : 'Dormitorio' },
+        { 'id' : '13',  'eng' : 'Wall',        'spa' : 'Pared'      },
+        { 'id' : '14',  'eng' : 'Balcony',     'spa' : 'Balcón'     },
+        { 'id' : '15',  'eng' : 'Beanbag',     'spa' : 'Puf'        },
+        { 'id' : '16',  'eng' : 'Table',       'spa' : 'Mesa'       }
+    ],
+    [
+        { 'id' : '1',   'eng' : 'Meat',         'spa' : 'Carne'          },
+        { 'id' : '2',   'eng' : 'Sausage',      'spa' : 'Salchicha'      },
+        { 'id' : '3',   'eng' : 'Beef',         'spa' : 'Carne de vaca'  },
+        { 'id' : '4',   'eng' : 'Pork',         'spa' : 'Carne de cerdo' },
+        { 'id' : '5',   'eng' : 'Poultry',      'spa' : 'Ave de corral'  },
+        { 'id' : '6',   'eng' : 'Lamb',         'spa' : 'Cordero'        },
+        { 'id' : '7',   'eng' : 'Milk',         'spa' : 'Leche'          },
+        { 'id' : '8',   'eng' : 'Wine',         'spa' : 'Vino'           },
+        { 'id' : '9',   'eng' : 'Juice',        'spa' : 'Jugo'           },
+        { 'id' : '10',  'eng' : 'Coffee',       'spa' : 'Café'           },
+        { 'id' : '11',  'eng' : 'Beer',         'spa' : 'Cerveza'        },
+        { 'id' : '12',  'eng' : 'Water',        'spa' : 'Agua'           }
     ]
 ];
 
@@ -109,8 +141,8 @@ const Game = ({ game }) => {
                 </>
               ) : (
                 <>
-                  <h1>Lo lograste!</h1>
-                  <h4>Ganaste en la categoría "{ category.name }"</h4>
+                  <h1 className="text-center">Lo lograste!</h1>
+                  <h4 className="text-center">Ganaste en la categoría "{ category.name }"</h4>
                   <Link to={ '/' } className="btn btn-primary">
                       Volver al menú
                   </Link>
